@@ -1,5 +1,106 @@
-.box {
-    background-color: aqua;
-    border: 1px solid;
-    border-radius: .4rem;
+$moderate_violet: hsl(263, 55%, 52%);
+$dark_grish_blue: hsl(217, 19%, 35%);
+$dark_blackish_blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$bg_color: hsl(0, 0%, 81%);
+
+body {
+  background-color: $bg_color;
+  width: auto;
+  margin: 10rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+#testimonials-box {
+  display: grid;
+  grid-template-areas:
+    "t1 t1 t2 t3"
+    "t4 t5 t5 t3";
+  gap: 1rem;
+}
+
+#t1 {
+  grid-area: t1;
+  background-color: $moderate_violet;
+}
+
+#t2 {
+  grid-area: t2;
+  background-color: $dark_grish_blue;
+}
+
+#t3 {
+  grid-area: t3;
+  background-color: $white;
+}
+
+#t4 {
+  grid-area: t4;
+  background-color: $white;
+}
+
+#t5 {
+  grid-area: t5;
+  background-color: $dark_blackish_blue;
+}
+
+.testimonial {
+  display: grid;
+  background-color: aqua;
+  border: 1px solid;
+  border-radius: 0.4rem;
+  padding: 1rem 2rem;
+  border: none;
+  gap: 1rem;
+  box-shadow: 10px 10px rgba($color: #000000, $alpha: 0.05);
+}
+
+.testimonial-title {
+  display: flex;
+  gap: 1rem;
+  font-size: 10px;
+  align-items: center;
+}
+
+.testimonial-title > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 1rem;
+}
+
+.testimonial-title > div {
+  h5 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  p {
+    opacity: 0.7;
+  }
+
+  span {
+    opacity: 0.5;
+    font-size: 8px;
+  }
+  display: grid;
+  flex-direction: column;
+}
+
+.testimonial-text {
+  font-weight: bold;
+  margin: 0;
+}
+
+.testimonial-info {
+  font-size: 12px;
+  margin: 0;
+}
+
+.dark {
+  color: black;
+}
+
+.light {
+  color: white;
 }
